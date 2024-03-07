@@ -21,29 +21,29 @@ public class ConvApplication {
                             @RequestParam("futura")int futura,
                             Model model){
         double result =0;
-        switch (futura){
+        switch (atual){
             case 1:
-                if (atual == 1){
+                if (futura == 1){
                     result=num1;
-                }else if(atual == 2){
-                    result=(num1-32)*5/9;
+                }else if(futura == 2){
+                    result=(num1*9/5)+32;
                 }else{
                     result=num1+273.15;
                 }
                 break;
             case 2:
-                if (atual==1){
-                    result=(num1*9/5)+32;
-                }else if(atual==2){
+                if (futura==1){
+                    result=(num1-32)*5/9;
+                }else if(futura==2){
                     result=num1;
                 }else{
                     result=(num1-32)*5/9 +273.15;
                 }
                 break;
             case 3:
-                if (atual==1){
+                if (futura==1){
                     result= num1-273.15;
-                } else if (atual==2) {
+                } else if (futura==2) {
                     result=(num1-273.15)*5/9+32;
                 }else {
                     result=num1;
